@@ -1,0 +1,25 @@
+#pragma once
+
+#define USE_GPIO
+
+#ifdef USE_GPIO
+
+#include <mraa.h>
+
+void GPIO_init()
+{
+    mraa_init();
+}
+
+
+void GPIO_dispose()
+{
+    mraa_deinit();
+}
+
+#else
+
+void GPIO_init() {}
+void GPIO_dispose() {}
+
+#endif

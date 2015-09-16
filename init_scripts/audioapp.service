@@ -1,0 +1,10 @@
+[Unit]
+Description=Launch Audio App
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/node /home/root/run.js
+WorkingDirectory=/home/root
+
+[Install]
+WantedBy=multi-user.target
